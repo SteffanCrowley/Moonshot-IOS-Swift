@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let astronauts = Bundle.main.decode("astronauts.json")
+
+    
     var body: some View {
-        ScrollView {
-            VStack(spacing: 10) {
-                ForEach(0..<100) {
-                    Text("Item \($0)")
-                        .font(.title)
-                }
-            }
-            .frame(maxWidth: .infinity)
-        }
+        Text("\(astronauts.count)")
+
     }
 }
 
